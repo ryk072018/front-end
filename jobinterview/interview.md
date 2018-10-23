@@ -125,4 +125,18 @@ str.search("ryk"); // -1 -> 没有找到任何匹配 返回-1
 str.search("gyt"); // 5 -> 返回第一个与regexp匹配的子串的起始位置；
 ```
 
-## 6. 怎样创建，添加，删除，移动，插入，
+## 6. 使用js怎样创建，添加，删除，移动，插入，
+```
+createElement(); // 创建一个具体的元素
+var element = document.createElement();
+
+appendChild(); // 添加
+removeChild(); // 删除
+replaceChild(); // 替换
+insertBefore(); // 插入 
+
+---查找；
+
+
+
+```

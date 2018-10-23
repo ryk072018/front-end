@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js创建元素</title>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+<script>
+    document.body.onload = addElement;
+
+    function addElement(){
+        var newDiv = document.createElement('div');
+        var newContent = document.createTextNode("heyy gyt");
+        newDiv.appendChild(newContent);
+        var currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+        // document.body.insetBefore(newDiv,currentDiv);
+    }
+
+</script>
+</html>
