@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../p1.jpg" sizes="16*16">
+    <title>超凶的冷空气来啦</title>
+</head>
+
+<body>
+    <div>good</div>
+    <script>
+        let percent = 0;
+        const title = "超凶的冷空气来啦";
+        const newinfo = "[收到7条新消息]";
+        const total = newinfo.length + 1;
+        let index = -1;
+        setInterval(function () {
+            index = (index + 1) % total;
+            document.title = newinfo.substr(index) + title;
+        }, 500);
+    </script>
+</body>
+
+</html>
