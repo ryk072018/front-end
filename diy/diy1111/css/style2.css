@@ -1,0 +1,22 @@
+.list{
+    color: #000099;
+}
+
+main aside h1 .h1-content{
+    display: inline-block;
+    width: 150px;
+}
+
+.h2-con{
+    display: inline-block;
+    width: 150px;
+}
+
+h3 .h3-con{
+    display: inline-block;
+    width: 180px;
+}
+h4 .h4-con{
+    display: inline-block;
+    width: 200px;
+}

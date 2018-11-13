@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+</head>
+
+<body>
+    <script>
+        const tree = {
+            type: 'redwood',
+            leaves: 'green',
+            height: 80,
+            age: 15,
+            getThisT:function(){
+                console.log(this)
+            },
+            growOneFoot: function () {
+                this.height += 1;
+            }
+        };
+        console.log(tree.getThisT())
+        tree.growOneFoot();
+        console.log(tree.growOneFoot);
+        let cc = tree.growOneFoot;
+        console.log(cc());
+
+
+    </script>
+</body>
+
+</html>
