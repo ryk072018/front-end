@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文件上传</title>
+    <style>
+        .upload{
+        width: 142px;
+        height: 50px;
+    }
+    .input-filter{
+        position: relative;
+        width: 150px;
+        height: 50px;
+        overflow: hidden;
+    }
+    .input-filter input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 142px;
+        height: 50px;
+        opacity: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="input-filter">
+        <img class="upload" src="../../images/p2.jpg" alt="上传图片">
+        <input type="file">
+    </div>
+</body>
+
+</html>

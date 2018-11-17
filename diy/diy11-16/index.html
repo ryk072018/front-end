@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算</title>
+    <style>
+        .parent{
+        width: 500px;
+        height: 400px;
+        border: 1px solid #333;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        预算上限：
+        <input type="text" class="upper">
+        <br>
+        每种物品价格：
+        <input type="text" id="items">
+        <br>
+        <input class="count" type="button" value="计算" onclick="goCount()">
+    </div>
+    <script>
+        function goCount() {
+            var items = document.getElementById('items').value;
+            // console.log(items);
+            // console.log(typeof items);
+            let arrMoney = items.split(' ');
+            // console.log(arrMoney);
+            var itemMoney = 0;
+            for (let i = 0; i < arrMoney.length; i++) {
+                // console.log(arrMoney[i]);
+                if (Number(arrMoney[i]) > 10000) {
+                    alert("有物品的价格超过10000")
+                } else {
+                    itemMoney += Number(arrMoney[i]);
+                }
+            }
+            alert("总价"+itemMoney);
+        }
+    </script>
+</body>
+
+</html>

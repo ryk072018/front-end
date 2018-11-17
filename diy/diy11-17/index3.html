@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" list="sexes">
+        <datalist id="sexes">
+            <option value="a"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+        </datalist>
+        <hr>
+        <input type="search">
+        <hr>
+        <div><label for="">手机号:<input type="tel" pattern="[\\d]{11}"></label></div>
+        <div>
+            <input type="file" multiple>
+        </div>
+        <hr>
+        <div><input type="range"></div>
+        <div>
+            <input type="range" min="1" max="10" list="range">
+            <datalist id="range">
+                <option value="1"></option>
+                <option value="5"></option>
+                <option value="10"></option>
+            </datalist>
+        </div>
+        <div><input type="color"></div>
+        <div><input type="date"></div>
+        <hr>
+        <div><input type="month"></div>
+        <div><input type="week"></div>
+        <hr>
+        <div><input type="time"></div>
+        <hr>
+        <div><input type="datetime-local"></div>
+        <hr>
+        <div>
+            <input type="reset" value="重置">
+            <input type="submit" value="提交">
+            <input type="button" value="按钮">
+        </div>
+    </div>
+</body>
+
+</html>
