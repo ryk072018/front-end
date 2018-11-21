@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>insertBefore</title>
+</head>
+
+<body>
+    <div class="wrapper"></div>
+    <button onclick="insert()">插入</button>
+    <script>
+        function insert() {
+            const newItem = document.createElement('div');
+            const newText = document.createTextNode('思维方式');
+            newItem.appendChild(newText);
+
+            const wra = document.querySelector('.wrapper');
+            wra.insertBefore(newItem, wra.childNodes[0]);
+            // wra.removeChild(wra.childNodes[0]);
+        }
+    </script>
+</body>
+
+</html>
