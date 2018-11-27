@@ -17,3 +17,4 @@
 * [Class基本语法](http://es6.ruanyifeng.com/#docs/class)
 * [js代码风格](https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 * [面向对象js编程视频](https://classroom.udacity.com/courses/ud015)
+* [使用js严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)

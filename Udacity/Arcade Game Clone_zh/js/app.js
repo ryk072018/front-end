@@ -1,10 +1,10 @@
+"use strict";
 // 这是我们的玩家要躲避的敌人 
 var Enemy = function (x, y, speed) {
     // 要应用到每个敌人的实例的变量写在这里
     // 我们已经提供了一个来帮助你实现更多
     // 敌人的图片，用一个我们提供的工具函数来轻松的加载文件
     this.sprite = 'images/enemy-bug.png';
-
     this.x = x; // x轴坐标
     this.y = y; // y轴坐标
     this.speed = speed; // 速度
@@ -43,7 +43,6 @@ class Player {
     update() {
         checkCollisions();
         if (this.y < 8) {
-            // console.log('动画');
             winAnimation();
         }
     }
@@ -57,7 +56,7 @@ class Player {
         } else if (e == 'right' && this.x < 350) {
             this.x = this.x = this.x + 100;
         } else if (e == 'up' && this.y > 7) {
-            this.y = this.y - 30;
+            this.y = this.y - 40;
         } else if (e == 'down' && this.y < 400) {
             this.y = this.y + 50;
         } else {
@@ -69,10 +68,20 @@ class Player {
 // 现在实例化你的所有对象
 // 把所有敌人的对象都放进一个叫 allEnemies 的数组里面
 // 把玩家对象放进一个叫 player 的变量里面
-let enemy1 = new Enemy(-60, 60, 150);
-let enemy2 = new Enemy(-70, 145, 300);
-let enemy3 = new Enemy(-60, 230, 100);
-const allEnemies = [enemy1, enemy2, enemy3];
+// let enemy1 = new Enemy(-60, 60, 150);
+// let enemy2 = new Enemy(-70, 145, 300);
+// let enemy3 = new Enemy(-60, 230, 100);
+// const allEnemies = [enemy1, enemy2, enemy3];
+
+// 使用for循环和随机数创建多个enemy实例；
+const allEnemies = [];
+for (let i = 0; i < 6; i++) {
+    let x = Math.random() * -10 - 60;
+    let y = Math.random() * 170 + 60;
+    let speed = Math.random() * 200 + 100;
+    let enemy = new Enemy(x, y, speed);
+    allEnemies.push(enemy);
+}
 let player = new Player('images/char-boy.png', 200, 400);
 
 // 检测玩家与敌人碰撞，碰撞后返回起点
@@ -89,7 +98,7 @@ function winAnimation() {
     setTimeout(() => {
         player.x = 200;
         player.y = 400;
-    }, 2000);
+    }, 3000);
 }
 
 // 这段代码监听游戏玩家的键盘点击事件并且代表将按键的关键数字送到 Player.handleInput()
