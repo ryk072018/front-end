@@ -63,6 +63,11 @@ class Player {
             return false;
         }
     }
+    // 重置玩家位置
+    reset() {
+        this.x = 200;
+        this.y = 400;
+    }
 }
 
 // 现在实例化你的所有对象
@@ -88,16 +93,14 @@ let player = new Player('images/char-boy.png', 200, 400);
 function checkCollisions() {
     allEnemies.forEach(function (enemy) {
         if (Math.abs(player.x - enemy.x) < 40 && Math.abs(player.y - enemy.y) < 40) {
-            player.x = 200;
-            player.y = 400;
+            player.reset();
         }
     });
 }
 // 玩家获胜后执行的动画
 function winAnimation() {
     setTimeout(() => {
-        player.x = 200;
-        player.y = 400;
+        player.reset();
     }, 3000);
 }
 
