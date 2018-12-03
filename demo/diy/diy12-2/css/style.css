@@ -1,0 +1,45 @@
+.info {
+    width: 500px;
+    height: 400px;
+    background: url('../../../images/p1.jpg')
+}
+
+.a-juejin:after {
+    content: '('attr(href)')'
+}
+
+.a-v2 {
+    text-shadow: 5px 5px 5px #ccd5ff;
+}
+
+@media(max-width:500px) {
+    .info {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* 适配 */
+@media(max-width:1280px) {
+    /* 在小于1280px像素的屏幕中，这里的样式才生效 */
+    font-size: 12px;
+}
+
+@media(min-width:1281px) and (max-width:1920px) {
+    font-size: 14px;
+}
+
+.show-p :nth-child(2n) {
+    /* 偶数 */
+    color: #ccd5ff;
+}
+
+.show-p :nth-child(2n+1) {
+    /* 奇数 */
+    color: bisque;
+}
+
+/* 伪元素选择器 */
+.first-word::first-letter {
+    color: red;
+}

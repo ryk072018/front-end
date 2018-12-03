@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column;
+            height: 500px;
+        }
+
+        .head,
+        .foot {
+            height: 100px;
+            border: 1px dashed #eee;
+        }
+
+        .body {
+            flex: 1;
+            display: flex;
+        }
+
+        .side {
+            width: 200px;
+            border: 1px dashed #ccc;
+        }
+
+        .main {
+            flex: 1;
+            border: 1px dashed #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">head</div>
+    <div class="body">
+        <div class="side">side</div>
+        <div class="main">main</div>
+    </div>
+    <div class="foot">foot</div>
+</body>
+
+</html>
