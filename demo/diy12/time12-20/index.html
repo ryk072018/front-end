@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cat cliker</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        小喵
+        <img id="img1" src="../../images/cat.jpg" alt="图片">
+        <span id="sum">1</span>
+    </div>
+    <div>
+        大喵
+        <img id="img2" src="../../images/cat2.jpg" alt="圖片">
+        <span id="sum2">1</span>
+    </div>
+    <script>
+        const ele = document.querySelector('#img1');
+        const eleSpan = document.querySelector('#sum');
+        let sum = document.querySelector('#sum').innerText;
+
+        const ele2 = document.querySelector('#img2');
+        const eleSpan2 = document.querySelector('#sum2');
+        let sum2 = document.querySelector('#sum2').innerText;
+
+        ele.addEventListener('click', function (e) {
+            console.log(e)
+            sum++;
+            eleSpan.innerText = sum;
+        }, false);
+
+        ele2.addEventListener('click', function (e) {
+            sum2++;
+            eleSpan2.innerText = sum2;
+        }, false);
+    </script>
+</body>
+
+</html>
+

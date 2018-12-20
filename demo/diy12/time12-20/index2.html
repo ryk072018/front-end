@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cat list</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script>
+        const catsImg = ['cat.jpg', 'cat2.jpg', 'cat3.jpg', 'cat4.jpg', 'cat5.jpg'];
+        const catsName = ['火星喵', '水星喵', '太空喵', '哈星喵', '流星喵'];
+
+        const cats = [{
+            name: "火星喵",
+            img: "cat.jpg"
+        }, {
+            name: "水星喵",
+            img: "cat2.jpg"
+        }, {
+            name: "太空喵",
+            img: "cat3.jpg"
+        }, {
+            name: "哈星喵",
+            img: "cat4.jpg"
+        }, {
+            name: "流星喵",
+            img: "cat5.jpg"
+        }];
+
+        let div1 = document.querySelector('#div1');
+        let pName = document.createElement('p');
+        let imgDisplay = document.createElement('img');
+        let pNum = document.createElement("p");
+        for (let i = 0; i < cats.length; i++) {
+            let catName = document.createElement('p');
+            catName.textContent = cats[i].name;
+            let cat = cats[i];
+
+            catName.addEventListener('click', ((catCopy) => {
+                return () => {
+                    // alert(catCopy)
+                    pName.textContent = catCopy.name;
+                    imgDisplay.src = `../../images/${catCopy.img}`;
+                    pNum.textContent = 0;
+                    pName.style.marginTop = '50px';
+                    div1.appendChild(pName);
+                    div1.appendChild(imgDisplay);
+                    div1.appendChild(pNum);
+                }
+            })(cat));
+            div1.appendChild(catName);
+        };
+
+        // 点击图片
+        imgDisplay.addEventListener('click', (e) => {
+            let countedNum = pNum.textContent;
+            countedNum++;
+            pNum.textContent = countedNum;
+        })
+    </script>
+</body>
+
+</html>
