@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const obj = {
+        //     a: 1,
+        //     b: [1, 2]
+        // }
+
+        // function deepClone(obj) {
+        //     let newObj = {};
+        //     for (let i in obj) {
+        //         newObj[i] = obj[i];
+        //     }
+        //     return newObj;
+        // }
+
+        // getClasses({
+        //     item1: true,
+        //     item2: false,
+        //     item3: true
+        // });
+
+        // const obj = {
+        //     item1: true,
+        //     item2: false,
+        //     item3: true
+        // }
+
+        // function getClasses(obj) {
+        //     let objValue = Object.values(obj);
+        //     let objKey = Object.keys(obj);
+        //     for (let i = 0; i < objValue.length; i++) {
+        //         if (objValue[i] == true) {
+        //             console.log(objKey[i])
+        //         }
+        //     }
+        // }
+        // getClasses(obj)
+
+        //作业3
+        const arr = [1, 0, 0, 2, 3, 0, 4, 5, 0, 0, 6, 7, 8, 9];
+
+        function filterFunc(arr, startIndex, endIndex) {
+            let arr2 = arr.slice(startIndex, endIndex);
+            console.log(arr2);
+        }
+        filterFunc(arr, 1)
+    </script>
+</body>
+
+</html>
