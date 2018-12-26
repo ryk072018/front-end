@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //作业3
+        const arr = [1, 0, 0, 2, 3, 0, 4, 5, 0, 0, 6, 7, 8, 9];
+
+        function filterFunc(arr, startIndex, endIndex) {
+
+            if (startIndex && endIndex) {
+                if (startIndex == endIndex) {
+                    arr.splice(startIndex, 1);
+                    deleteZero(arr);
+                } else if (startIndex < endIndex) {
+                    let arr1 = arr.slice(0, startIndex);
+                    console.log(arr1);
+                    let arr2 = arr.slice(endIndex + 1);
+                    console.log(arr2)
+                    let arr3 = arr1.concat(arr2);
+                    console.log(arr3);
+                    deleteZero(arr3);
+                } else {
+                    console.error('startIndex应该小于等于endIndex');
+                }
+            } else {
+                arr.splice(startIndex || endIndex, 1);
+                deleteZero(arr);
+            }
+
+        }
+
+        function deleteZero(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                // console.log(i);
+                if (arr[0] == 0) {
+                    arr.shift();
+                } else if (arr[arr.length] == 0) {
+                    arr.pop();
+                } else {
+                    let isFrist = arr[i];
+                    let isSecond = arr[i + 1];
+
+                    if (arr[i + 1] == 0) {
+                        let isSecond = arr[i + 1];
+                        if (arr[i + 2] == 0) {
+                            arr.splice(i + 2, 1);
+                        }
+                    }
+
+                }
+            }
+
+            console.log(arr);
+        }
+
+        filterFunc(arr, 3, 6);
+    </script>
+</body>
+
+</html>
