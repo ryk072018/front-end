@@ -45,11 +45,7 @@
                 } else if (arr[arr.length] == 0) {
                     arr.pop();
                 } else {
-                    let isFrist = arr[i];
-                    let isSecond = arr[i + 1];
-
                     if (arr[i + 1] == 0) {
-                        let isSecond = arr[i + 1];
                         if (arr[i + 2] == 0) {
                             arr.splice(i + 2, 1);
                         }
@@ -58,7 +54,6 @@
                 }
             }
 
-            console.log(arr);
         }
 
         filterFunc(arr, 3, 6);
